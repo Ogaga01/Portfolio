@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'mixins';
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    height: 7rem;
+    background-color: $color-tertiary;
+    padding: 2rem 5rem;
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 500;
+        color: $color-white;
+        width: 25%;
+    }
+
+    &__nav {
+        width: 40%;
+        color: $color-white;
+        font-size: 1.7rem;
+        font-weight: 200;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.navlink {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.navlink:hover {
+    color: $color-primary;
+}
+
+.active {
+    color: $color-primary;
+}
