@@ -13,6 +13,7 @@
     @include respond (mob-nav){
         font-size: 2rem;
         padding: 0 7rem;
+        margin-bottom: 10rem;
     }
 
     @include respond (phone){

@@ -13,7 +13,7 @@ const Navbar: FC = () => {
             smooth={true}
             offset={50}
             duration={500}
-            to="home"
+            to="hero"
             className={styles.navlink}
           >
             Home

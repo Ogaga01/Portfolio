@@ -1,0 +1,81 @@
+@import 'variables';
+@import 'mixins';
+
+.about {
+    padding: 0 15rem;
+    display: flex;
+    width: 100%;
+
+    @include respond (tab-port){
+        padding: 10rem;;
+    }
+
+    @include respond (mob-nav){
+        padding: 0 7rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include respond (phone){
+        padding: 0 2rem;;
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        color: $color-primary;
+        margin-bottom: 2rem;
+
+        @include respond (tab-land){
+            font-size: 3rem;
+        }
+
+         @include respond (tab-port){
+            font-size: 2.7rem;
+         }
+
+        @include respond (mob-nav){
+            font-size: 3.5rem;
+        }
+    }
+
+    &__one,
+    &__two,
+    &__three,
+    &__four {
+        font-size: 1.5rem;
+        width: 80%;
+        font-weight: 300;
+        color: $color-black;
+        margin-bottom: 1.5rem;
+
+        @include respond (tab-land){
+            font-size: 1.8rem;
+        }
+
+        @include respond (tab-port){
+        font-size: 2rem;
+    }
+
+        @include respond (mob-nav){
+            font-size: 2rem;
+        }
+    }
+
+    &__image {
+        margin-top: 5rem;
+    }
+}
+
+a {
+    color: $color-tertiary;
+    text-decoration: underline;
+}
+
+span {
+    color: $color-tertiary;
+    cursor: pointer;
+}
+
+.image {
+    width: 100%;
+}

@@ -40,7 +40,7 @@ const MobileNavbar: FC = () => {
             smooth={true}
             offset={50}
             duration={500}
-            to="home"
+            to="hero"
             className={styles.navlink}
             onClick={showMenu}
           >

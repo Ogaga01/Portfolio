@@ -12,6 +12,7 @@
     background-color: $color-tertiary;
     padding: 2rem 5rem;
     margin-bottom: 0;
+    z-index: 10;
 
     @include respond (mob-nav){
         display: none;
@@ -48,6 +49,7 @@
 .navlink {
     text-transform: uppercase;
     cursor: pointer;
+    color: $color-white;
 }
 
 .navlink:hover {
