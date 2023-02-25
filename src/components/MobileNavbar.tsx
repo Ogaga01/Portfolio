@@ -1,13 +1,40 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-scroll";
-import styles from "./../sass/_navbar.module.scss";
+import styles from "./../sass/_mobilenavbar.module.scss";
 
-const Navbar: FC = () => {
+const MobileNavbar: FC = () => {
+  const [active, setActive] = useState<boolean>(false);
+
+  const showMenu = () => {
+    setActive(!active);
+  };
+
   return (
-    <div className={styles.navigation}>
-      <h1 className={styles["navigation__title"]}>Ogaga.</h1>
-      <nav className={styles["navigation__nav"]}>
-        <ul className={styles["navigation__list"]}>
+    <>
+      <div className={styles["mobile_navigation"]}>
+        <h1 className={styles["mobile_navigation--title"]}>Ogaga.</h1>
+        <AiOutlineMenu
+          className={styles["mobile_navigation--menu_icon"]}
+          onClick={showMenu}
+        />
+      </div>
+      <nav
+        className={
+          styles[
+            active
+              ? "active"
+              : "slider"
+          ]
+        }
+      >
+        <ul className={styles["slider__nav"]}>
+          <div className={styles['slider__closed']}>
+            <AiOutlineClose
+              className={styles["slider__close"]}
+              onClick={showMenu}
+            />
+          </div>
           <Link
             spy={true}
             smooth={true}
@@ -15,6 +42,7 @@ const Navbar: FC = () => {
             duration={500}
             to="home"
             className={styles.navlink}
+            onClick={showMenu}
           >
             Home
           </Link>
@@ -25,6 +53,7 @@ const Navbar: FC = () => {
             duration={500}
             to="about"
             className={styles.navlink}
+            onClick={showMenu}
           >
             About
           </Link>
@@ -35,6 +64,7 @@ const Navbar: FC = () => {
             duration={500}
             to="projects"
             className={styles.navlink}
+            onClick={showMenu}
           >
             Projects
           </Link>
@@ -45,6 +75,7 @@ const Navbar: FC = () => {
             duration={500}
             to="testimonials"
             className={styles.navlink}
+            onClick={showMenu}
           >
             Testimonials
           </Link>
@@ -54,14 +85,15 @@ const Navbar: FC = () => {
             offset={50}
             duration={500}
             className={styles.navlink}
+            onClick={showMenu}
             to="Contact"
           >
             Contact
           </Link>
         </ul>
       </nav>
-    </div>
+    </>
   );
 };
 
-export default Navbar;
+export default MobileNavbar;
