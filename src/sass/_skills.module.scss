@@ -1,0 +1,114 @@
+@import 'variables';
+@import 'mixins';
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    padding: 15rem;
+
+    @include respond (tab-port){
+        padding: 10rem;;
+    }
+
+    @include respond (mob-nav){
+        padding: 0 7rem;
+    }
+
+    @include respond (phone){
+        padding: 0 2rem;;
+    }
+
+    &__heading {
+        font-size: 2.5rem;
+        color: $color-primary;
+        margin-bottom: 4rem;
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+
+        @include respond (mob-nav){
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    }
+
+    &__section {
+        display: flex;
+        width: 40%;
+        margin-right: 5%;
+        margin-bottom: 2rem;
+        @include respond (mob-nav){
+                width: 80%;
+            }
+
+        &--icons {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            padding: 3rem;
+            align-items: center;
+            border: 1px solid $color-primary;
+
+            @include respond (mob-nav){
+                width: 35%;
+            }
+        }
+
+        &--icon {
+            font-size: 7rem;
+            font-weight: 300;
+            transition: all 1s;
+        }
+
+        &--list {
+            list-style: none;
+            padding: 1rem 3rem;
+            width: 70%;
+            transition: all 1s;
+
+            @include respond (mob-nav){
+                width: 50%;
+            }
+        }
+
+        &--heading {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+
+            @include respond (mob-nav){
+                font-size: 2.5rem;
+            }
+        }
+
+        &--item {
+            font-size: 1.8rem;
+            font-weight: 100;
+            margin-bottom: rem;
+
+            @include respond (mob-nav){
+                font-size: 2.2rem;
+            }
+        }
+
+        &:hover &--icons {
+            border: 1px solid $color-tertiary;
+        }
+
+        &:hover &--icon {
+            transform: scale(1.5);
+            color: $color-tertiary;
+        }
+
+        &:hover &--list {
+            background-color: $color-tertiary;
+            background-position: 100%;
+            color: $background;
+            
+        }
+    }
+}
