@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import MobileNavbar from './components/MobileNavbar';
 import Navbar from './components/Navbar';
 import Project from './components/Project';
+import Recommendation from './components/Recommendation';
 import Skills from './components/Skills';
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       <Hero />
       <About />
       <Skills />
-      <Project/>
+      <Project />
+      <Recommendation/>
     </div>
   );
 }
