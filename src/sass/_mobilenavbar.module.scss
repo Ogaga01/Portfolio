@@ -13,6 +13,12 @@
     align-items: center;
     padding: 3rem;
     color: $color-tertiary;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: $background;
+
 
     @include respond (mob-nav){
        &--title {
@@ -38,6 +44,7 @@
         color:$background;
         background-color: $color-tertiary;
         transition: 1s ease;
+        z-index: 20;
 
         &__nav {
             display: flex;
@@ -73,6 +80,7 @@
         color:white;
         background-color: $color-tertiary;
         transition: 1s ease;
+        z-index: 10;
     }
 }
 
@@ -83,8 +91,9 @@
 
     @include respond (mob-nav){
         margin-block: 3rem;
-        font-size: 4rem;
+        font-size: 3rem;
         text-transform: uppercase;
+        color: $background;
     }
 
     &:hover,
