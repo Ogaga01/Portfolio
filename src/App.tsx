@@ -1,5 +1,6 @@
 import React from 'react';
 import About from './components/About';
+import Contact from './components/Contact';
 import Hero from './components/Hero';
 import MobileNavbar from './components/MobileNavbar';
 import Navbar from './components/Navbar';
@@ -16,7 +17,8 @@ function App() {
       <About />
       <Skills />
       <Project />
-      <Recommendation/>
+      <Recommendation />
+      <Contact/>
     </div>
   );
 }
