@@ -1,5 +1,6 @@
 import React, { FC, useState } from "react";
 import { IoIosSend } from "react-icons/io";
+import Fade from 'react-reveal/Fade'
 import ogaga from "./../images/ogee1.png";
 import styles from "./../sass/_contact.module.scss";
 
@@ -21,50 +22,52 @@ const Contact: FC = () => {
   };
 
   return (
-    <div className={styles["contact"]}>
-      <h1 className={styles["contact__heading"]}>Contact Me</h1>
-      <div className={styles["contact__body"]}>
-        <div className={styles["contact__body--image"]}>
-          <img
-            src={ogaga}
-            alt="ogaga"
-            className={styles["contact__body--img"]}
-          />
+    <Fade bottom>
+      <section className={styles["contact"]}>
+        <h1 className={styles["contact__heading"]}>Contact Me</h1>
+        <div className={styles["contact__body"]}>
+          <div className={styles["contact__body--image"]}>
+            <img
+              src={ogaga}
+              alt="ogaga"
+              className={styles["contact__body--img"]}
+            />
+          </div>
+          <form
+            action="https://formspree.io/f/mqkobkdq"
+            method="post"
+            className={styles["contact__body--form"]}
+          >
+            <input
+              type="text"
+              value={name}
+              onChange={handleName}
+              placeholder="Full Name"
+              name="name"
+              className={styles["contact__body--name"]}
+            />
+            <input
+              type="email"
+              value={email}
+              onChange={handleEmail}
+              placeholder="Email"
+              name="email"
+              className={styles["contact__body--email"]}
+            />
+            <textarea
+              value={text}
+              onChange={handleText}
+              placeholder="Message"
+              name="textarea"
+              className={styles["contact__body--text"]}
+            />
+            <button type="submit" className={styles["contact__body--button"]}>
+              Send <IoIosSend />{" "}
+            </button>
+          </form>
         </div>
-        <form
-          action="https://formspree.io/f/mqkobkdq"
-          method="post"
-          className={styles["contact__body--form"]}
-        >
-          <input
-            type="text"
-            value={name}
-            onChange={handleName}
-                      placeholder="Full Name"
-                      name="name"
-            className={styles["contact__body--name"]}
-          />
-          <input
-            type="email"
-            value={email}
-            onChange={handleEmail}
-                      placeholder="Email"
-                      name="email"
-            className={styles["contact__body--email"]}
-          />
-          <textarea
-            value={text}
-            onChange={handleText}
-                      placeholder="Message"
-                      name="textarea"
-            className={styles["contact__body--text"]}
-          />
-          <button type="submit" className={styles["contact__body--button"]}>
-            Send <IoIosSend />{" "}
-          </button>
-        </form>
-      </div>
-    </div>
+      </section>
+    </Fade>
   );
 };
 
