@@ -5,6 +5,7 @@
     width: 100%;
     align-items: center;
     padding: 15rem;
+    padding-bottom: 0;
 
     @include respond (tab-port){
         padding: 10rem;

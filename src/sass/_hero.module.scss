@@ -1,10 +1,14 @@
 @import 'variables';
 @import 'mixins';
+@import 'animation';
 
 .hero {
     margin-top: 10vh;
     width: 100%;
     padding: 15rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 
     @include respond (tab-port){
         padding: 10rem;
