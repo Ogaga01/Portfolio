@@ -1,38 +1,21 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { FC } from "react";
 import { Recommendations } from "../types/recommendation";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import RecommendationCard from "./RecommendationCard";
+import styles from './../sass/_recommendation.module.scss'
 
 const Recommendation: FC = () => {
-  const [index, setIndex] = useState<number>(0);
-
-  useEffect(() => {
-    const lastIndex: number = Recommendations.length - 1;
-    if (index < 0) {
-      setIndex(lastIndex);
-    }
-    if (index > lastIndex) {
-      setIndex(0);
-    }
-  }, [index]);
-
-  useEffect(() => {
-    let slider: NodeJS.Timer = setInterval(() => {
-      setIndex(index + 1);
-    }, 5000);
-    return () => {
-      clearInterval(slider);
-    };
-  }, [index]);
-
-  return (
-    <Carousel>
-      {Recommendations.map((recommendation) => (
-        <RecommendationCard props={recommendation} />
-      ))}
-    </Carousel>
-  );
+    return (
+        <div className={styles['testimonials']}>
+        <h1 className={styles['testimonials__heading']}>Testimonials</h1>
+        <Carousel>
+          {Recommendations.map((recommendation) => (
+            <RecommendationCard props={recommendation} />
+          ))}
+        </Carousel>
+      </div>
+    );
 };
 
 export default Recommendation;
