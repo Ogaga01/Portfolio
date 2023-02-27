@@ -5,17 +5,21 @@
     display: flex;
     flex-direction: column;
     padding: 15rem;
+    padding-bottom: 0;
 
     @include respond (tab-port){
-        padding: 10rem;;
+        padding: 10rem;
+        padding-top: 15rem;
     }
 
     @include respond (mob-nav){
         padding: 0 7rem;
+        padding-top: 19rem;
     }
 
     @include respond (phone){
-        padding: 0 2rem;;
+        padding: 0 2rem;
+        padding-top: 19rem;
     }
 
     &__heading {

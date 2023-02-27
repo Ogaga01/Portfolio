@@ -6,8 +6,8 @@ import styles from './../sass/_project.module.scss'
 
 const Project: FC = () => {
     return (
-      <Fade bottom>
-        <section className={styles["projects"]}>
+      // <Fade bottom>
+        <section id='projects' className={styles["projects"]}>
           <h1 className={styles["projects__head"]}>My Featured Projects</h1>
           <div className={styles["projects__div"]}>
             {projects.map((poject) => (
@@ -15,7 +15,7 @@ const Project: FC = () => {
             ))}
           </div>
         </section>
-      </Fade>
+      // {/* </Fade> */}
     );
 };
 

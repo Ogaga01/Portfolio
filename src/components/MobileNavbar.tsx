@@ -19,17 +19,9 @@ const MobileNavbar: FC = () => {
           onClick={showMenu}
         />
       </div>
-      <nav
-        className={
-          styles[
-            active
-              ? "active"
-              : "slider"
-          ]
-        }
-      >
+      <nav className={styles[active ? "active" : "slider"]}>
         <ul className={styles["slider__nav"]}>
-          <div className={styles['slider__closed']}>
+          <div className={styles["slider__closed"]}>
             <AiOutlineClose
               className={styles["slider__close"]}
               onClick={showMenu}
@@ -62,6 +54,17 @@ const MobileNavbar: FC = () => {
             smooth={true}
             offset={50}
             duration={500}
+            className={styles.navlink}
+            onClick={showMenu}
+            to="skills"
+          >
+            Skills
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
             to="projects"
             className={styles.navlink}
             onClick={showMenu}
@@ -86,7 +89,7 @@ const MobileNavbar: FC = () => {
             duration={500}
             className={styles.navlink}
             onClick={showMenu}
-            to="Contact"
+            to="contact"
           >
             Contact
           </Link>

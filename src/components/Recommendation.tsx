@@ -8,8 +8,8 @@ import styles from './../sass/_recommendation.module.scss'
 
 const Recommendation: FC = () => {
     return (
-      <Fade bottom>
-        <section className={styles["testimonials"]}>
+      // <Fade bottom>
+        <section id="testimonials" className={styles["testimonials"]}>
           <h1 className={styles["testimonials__heading"]}>Testimonials</h1>
           <Carousel>
             {Recommendations.map((recommendation) => (
@@ -17,7 +17,7 @@ const Recommendation: FC = () => {
             ))}
           </Carousel>
         </section>
-      </Fade>
+      // </Fade>
     );
 };
 

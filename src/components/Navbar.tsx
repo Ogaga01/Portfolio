@@ -33,6 +33,16 @@ const Navbar: FC = () => {
             smooth={true}
             offset={50}
             duration={500}
+            className={styles.navlink}
+            to="skills"
+          >
+            Skills
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
             to="projects"
             className={styles.navlink}
           >
@@ -54,7 +64,7 @@ const Navbar: FC = () => {
             offset={50}
             duration={500}
             className={styles.navlink}
-            to="Contact"
+            to="contact"
           >
             Contact
           </Link>

@@ -6,8 +6,8 @@ import styles from './../sass/_about.module.scss'
 
 const About: FC = () => {
   return (
-    <Fade bottom>
-      <section className={styles["about"]}>
+    // <Fade bottom>
+      <section id="about" className={styles["about"]}>
         <div>
           <h1 className={styles["about__title"]}>About Me</h1>
           <p className={styles["about__one"]}>
@@ -57,7 +57,7 @@ const About: FC = () => {
           <img className={styles.image} src={ogaga} alt="Ogaga" />
         </div>
       </section>
-    </Fade>
+    // </Fade>
   );
 };
 
