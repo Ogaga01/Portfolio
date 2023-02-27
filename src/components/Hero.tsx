@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
 import { Link } from 'react-scroll';
-import Fade from "react-reveal/Fade";
 import styles from './../sass/_hero.module.scss'
 
 const Hero: FC = () => {
   return (
-    <Fade bottom>
-      <header className={styles["hero"]}>
+    // <Fade bottom>
+      <header id='hero' className={styles["hero"]}>
         <p className={styles["hero__greeting"]}>Hi, my name is</p>
         <h1 className={styles["hero__name"]}>Ogaga Iyara.</h1>
         <ul className={styles["hero__skills"]}>
@@ -39,7 +38,7 @@ const Hero: FC = () => {
           </a>
         </div>
       </header>
-    </Fade>
+    // </Fade>
   );
 };
 

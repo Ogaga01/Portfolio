@@ -9,7 +9,7 @@ import styles from './../sass/_skills.module.scss'
 
 const Skills: FC = () => {
   return (
-    <section className={styles["skills"]}>
+    <section id="skills" className={styles["skills"]}>
       <h1 className={styles["skills__heading"]}>Technical and Soft Skills</h1>
       <div className={styles['skills__content']}>
         <div className={styles["skills__section"]}>

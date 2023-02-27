@@ -10,7 +10,7 @@ import styles from "./../sass/_footer.module.scss";
 
 const Footer: FC = () => {
   return (
-    <footer className={styles["footer"]}>
+    <footer id="footer" className={styles["footer"]}>
       <h1 className={styles["footer__heading"]}>Ogaga Iyara Nicholas</h1>
       <h1 className={styles["footer__location"]}>Lagos, Nigeria</h1>
       <div className={styles["footer__contact"]}>
