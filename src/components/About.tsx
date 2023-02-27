@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import ogaga from "./../images/ogaga.jpeg";
 import { Link } from "react-scroll";
-import Fade from "react-reveal/Fade";
 import styles from './../sass/_about.module.scss'
 
 const About: FC = () => {

@@ -1,6 +1,5 @@
 import React, { FC, useState } from "react";
 import { IoIosSend } from "react-icons/io";
-import Fade from 'react-reveal/Fade'
 import ogaga from "./../images/ogee1.png";
 import styles from "./../sass/_contact.module.scss";
 

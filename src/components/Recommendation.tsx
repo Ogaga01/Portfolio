@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import { Recommendations } from "../types/recommendation";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import Fade from 'react-reveal/Fade'
 import RecommendationCard from "./RecommendationCard";
 import styles from './../sass/_recommendation.module.scss'
 

@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Link } from 'react-scroll';
-import Fade from "react-reveal/Fade";
 import styles from './../sass/_hero.module.scss'
 
 const Hero: FC = () => {

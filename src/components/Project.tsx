@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import Fade from 'react-reveal/Fade'
 import { projects } from '../types/projects';
 import ProjectCard from './ProjectCard';
 import styles from './../sass/_project.module.scss'
