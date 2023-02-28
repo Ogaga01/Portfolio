@@ -32,6 +32,7 @@
         display: flex;
         width: 100%;
         flex-wrap: wrap;
+        justify-content: center;
 
         @include respond (mob-nav){
         display: flex;
@@ -42,12 +43,36 @@
 
     &__section {
         display: flex;
-        width: 40%;
-        margin-right: 5%;
+        width: 45%;
+        // margin-right: 5%;
         margin-bottom: 2rem;
+        justify-content: space-between;
+
+        &:nth-child(2){
+            margin-left: 5%;
+        }
+
+        &:nth-child(4){
+            margin-left: 5%;
+        }
+        
         @include respond (mob-nav){
-                width: 80%;
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+
+                &:nth-child(2){
+            margin-left: 0%;
+        }
+
+        &:nth-child(4){
+            margin-left: 0%;
+        }
             }
+
+        @include respond (mini-phone){
+            width: 100%;
+        }
 
         &--icons {
             width: 30%;
@@ -58,6 +83,10 @@
             border: 1px solid $color-primary;
 
             @include respond (mob-nav){
+                width: 35%;
+            }
+
+            @include respond (mini-phone){
                 width: 35%;
             }
         }
@@ -75,7 +104,11 @@
             transition: all 1s;
 
             @include respond (mob-nav){
-                width: 50%;
+                width: 65%;
+            }
+
+            @include respond (mini-phone){
+                width: 65%;
             }
         }
 

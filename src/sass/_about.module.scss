@@ -5,6 +5,7 @@
 .about {
     padding: 0 15rem;
     display: flex;
+    flex-direction: column;
     width: 100%;
     padding-top: 15rem;
     padding-bottom: 0;
@@ -25,6 +26,25 @@
     @include respond (phone){
         padding: 0 2rem;
         padding-top: 19rem;
+    }
+
+    &__info {
+        display: flex;
+        width: 100%;
+
+        &--art{
+            width: 70%;
+
+            @include respond (mob-nav){
+            width: 100%;
+        }
+        }
+
+        @include respond (mob-nav){
+           display: flex;
+           flex-direction: column;
+           width: 100%;
+        }
     }
 
     &__title {
@@ -50,10 +70,12 @@
     &__three,
     &__four {
         font-size: 1.5rem;
-        width: 80%;
+        width: 90%;
         font-weight: 300;
         color: $color-black;
+        margin: 0;
         margin-bottom: 1.5rem;
+        padding: 0;
 
         @include respond (tab-land){
             font-size: 1.8rem;
@@ -69,7 +91,12 @@
     }
 
     &__image {
-        margin-top: 5rem;
+        // margin-top: 5rem;
+        width: 25%;
+
+        @include respond (mob-nav){
+            width: 100%;
+        }
     }
 }
 

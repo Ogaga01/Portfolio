@@ -6,9 +6,10 @@ import styles from './../sass/_about.module.scss'
 const About: FC = () => {
   return (
     // <Fade bottom>
-      <section id="about" className={styles["about"]}>
-        <div>
-          <h1 className={styles["about__title"]}>About Me</h1>
+    <section id="about" className={styles["about"]}>
+      <h1 className={styles["about__title"]}>About Me</h1>
+      <div className={styles["about__info"]}>
+        <div className={styles['about__info--art']}>
           <p className={styles["about__one"]}>
             Hello! My name is Ogaga Iyara Nicholas and I'm a creative developer
             who loves to work on appealing websites with a passion for User
@@ -55,7 +56,8 @@ const About: FC = () => {
         <div className={styles["about__image"]}>
           <img className={styles.image} src={ogaga} alt="Ogaga" />
         </div>
-      </section>
+      </div>
+    </section>
     // </Fade>
   );
 };
