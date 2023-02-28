@@ -9,6 +9,7 @@
     animation-name: moveInLeft;
     animation-duration: 2s;
     animation-timing-function: ease-out;
+    padding-bottom: 0rem;
 
     @include respond (tab-port){
         padding: 10rem;

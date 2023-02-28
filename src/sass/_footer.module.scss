@@ -70,4 +70,8 @@
     &__copyright {
         font-size: 1.5rem;
     }
+
+    @include respond (mob-nav){
+            width: 100%;
+        }
 }
