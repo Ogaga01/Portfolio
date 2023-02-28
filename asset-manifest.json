@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.41d210c0.css",
+    "main.js": "/portfolio/static/js/main.c081b15d.js",
+    "static/media/ogee1.png": "/portfolio/static/media/ogee1.4340a9dd6b3975f7e29b.png",
+    "static/media/ogaga.jpeg": "/portfolio/static/media/ogaga.5c7b9bc6cf1fd3a43d6e.jpeg",
+    "index.html": "/portfolio/index.html",
+    "main.41d210c0.css.map": "/portfolio/static/css/main.41d210c0.css.map",
+    "main.c081b15d.js.map": "/portfolio/static/js/main.c081b15d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41d210c0.css",
+    "static/js/main.c081b15d.js"
+  ]
+}
